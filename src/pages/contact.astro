@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout pageTitle='Contact Me'>
-  <form id='contact-form' onsubmit='event.preventDefault(); submitMessage();'>
+  <form id='contact-form' onsubmit='event.preventDefault();'>
     <div class='form-element'>
       <label for='name'>Name:</label>
       <div>
@@ -35,8 +35,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       type='submit'
       class='button primary disabled'
       id='submit-button'
-      onmousedown='pressButton()'
-      onmouseup='releaseButton()'
       disabled
     >
       Submit
