@@ -206,7 +206,7 @@ button.disabled {
 }
 
 a[target='_blank']::after {
-  content: url(/images/icons/open-in-new.svg);
+  content: url(/dkm-astro/images/icons/open-in-new.svg);
   margin: 0 3px 0 5px;
 }
 
