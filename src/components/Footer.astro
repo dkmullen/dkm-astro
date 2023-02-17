@@ -1,0 +1,27 @@
+---
+const platform = 'github.com';
+const username = 'dkmullen';
+import Social from './Social.astro';
+import Navigation from './Navigation.astro';
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+  <p>
+    Learn more about my projects on <a
+      href={`https://${platform}/${username}`}
+      target='_blank'>{platform}</a
+    >!
+  </p>
+  <Social platform='awscommunity.social' username='@dkmullen' name='mastadon' />
+  <Social platform='github.com' username='dkmullen' />
+  <Social platform='youtube.com' username='dkmullen' />
+  <Navigation />
+</footer>
