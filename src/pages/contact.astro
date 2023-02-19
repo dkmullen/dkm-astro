@@ -3,67 +3,69 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout pageTitle='Contact Me'>
-  <form id='contact-form' onsubmit='event.preventDefault();'>
-    <div class='form-element'>
-      <label for='name'>Name:</label>
-      <div>
-        <input type='text' id='name' class='input' name='name' required />
+  <div class='center'>
+    <form id='contact-form' onsubmit='event.preventDefault();'>
+      <div class='form-element'>
+        <label for='name'>Name:</label>
+        <div>
+          <input type='text' id='name' class='input' name='name' required />
+        </div>
       </div>
-    </div>
-    <div class='form-element'>
-      <label for='email'>Email:</label><br />
-      <div>
-        <input type='email' id='email' class='input' name='email' required />
+      <div class='form-element'>
+        <label for='email'>Email:</label><br />
+        <div>
+          <input type='email' id='email' class='input' name='email' required />
+        </div>
+        <div id='email-error-message' class='hide'>
+          Please enter a valid email address.
+        </div>
       </div>
-      <div id='email-error-message' class='hide'>
-        Please enter a valid email address.
+      <div class='form-element'>
+        <label for='message'>Message:</label>
+        <div>
+          <textarea
+            cols='48'
+            rows='10'
+            class='input textarea'
+            id='message'
+            required></textarea>
+        </div>
       </div>
-    </div>
-    <div class='form-element'>
-      <label for='message'>Message:</label>
-      <div>
-        <textarea
-          cols='48'
-          rows='10'
-          class='input textarea'
-          id='message'
-          required></textarea>
-      </div>
-    </div>
 
-    <button
-      type='submit'
-      class='button primary disabled'
-      id='submit-button'
-      disabled
-    >
-      Submit
-    </button>
-  </form>
-  <div id='progress-bar'>
-    <span class='indicator'>*</span>
-    <span class='indicator'>*</span>
-    <span class='indicator'>*</span>
-  </div>
-  <p>
-    <span class='social-link'
-      ><a href='https://github.com/dkmullen' target='_blank'>Github</a></span
-    >
-    <span class='social-link'
-      ><a href='https://www.linkedin.com/in/dkmullen/' target='_blank'
-        >LinkedIn</a
-      ></span
-    >
-    <span class='social-link'>
-      <a rel='me' href='https://awscommunity.social/@dkmullen' target='_blank'
-        >Mastodon</a
+      <button
+        type='submit'
+        class='button primary disabled'
+        id='submit-button'
+        disabled
       >
-    </span>
-  </p>
-  <p class='message-received hide' id='message-received'>
-    Thanks! I'll get back to you soon.
-  </p>
-  <p class='error-sending-message error-text hide' id='error-sending-message'>
-    Sorry, there was an error in sending the message. Please try again.
-  </p>
+        Submit
+      </button>
+    </form>
+    <div id='progress-bar'>
+      <span class='indicator'>*</span>
+      <span class='indicator'>*</span>
+      <span class='indicator'>*</span>
+    </div>
+    <p>
+      <span class='social-link'
+        ><a href='https://github.com/dkmullen' target='_blank'>Github</a></span
+      >
+      <span class='social-link'
+        ><a href='https://www.linkedin.com/in/dkmullen/' target='_blank'
+          >LinkedIn</a
+        ></span
+      >
+      <span class='social-link'>
+        <a rel='me' href='https://awscommunity.social/@dkmullen' target='_blank'
+          >Mastodon</a
+        >
+      </span>
+    </p>
+    <p class='message-received hide' id='message-received'>
+      Thanks! I'll get back to you soon.
+    </p>
+    <p class='error-sending-message error-text hide' id='error-sending-message'>
+      Sorry, there was an error in sending the message. Please try again.
+    </p>
+  </div>
 </BaseLayout>

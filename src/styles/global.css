@@ -16,9 +16,8 @@
 
 body {
   margin: 0 auto;
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.15rem;
+  line-height: 1.6;
 }
 li {
   list-style: none;
@@ -26,6 +25,7 @@ li {
 }
 .headline {
   margin-bottom: 2rem;
+  margin-top: -2rem;
 }
 .headline h1,
 .headline h2,
@@ -44,6 +44,9 @@ a:hover {
 .link-section {
   margin-bottom: 2rem;
 }
+.center {
+  text-align: center;
+}
 .quote {
   text-align: left;
 }
@@ -57,7 +60,7 @@ a:hover {
   background-color: var(--main-bg-color);
 }
 .navbar {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   display: flex;
   color: white;
@@ -206,7 +209,7 @@ button.disabled {
 }
 
 a[target='_blank']::after {
-  content: url(/dkm-astro/images/icons/open-in-new.svg);
+  content: url(/images/icons/open-in-new.svg);
   margin: 0 3px 0 5px;
 }
 
@@ -217,7 +220,12 @@ a[target='_blank']::after {
 .smaller {
   font-size: small;
 }
-@media (max-width: 839px) {
+.blog-list,
+.blog-post {
+  max-width: 800px;
+  margin: auto;
+}
+@media (max-width: 899px) {
   .logo {
     font-size: 2.5rem;
   }

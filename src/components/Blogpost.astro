@@ -1,0 +1,12 @@
+---
+const { title, url, pre_1, pre_2 } = Astro.props;
+---
+
+<div class='blog-list'>
+  <li>
+    <h2><a href={url}>{title}</a></h2>
+    <p>{pre_1}</p>
+    <p>{pre_2}</p>
+    <p><a href={url}>Keep reading</a></p>
+  </li>
+</div>
